@@ -1,5 +1,5 @@
 # CEOS_MISSION_LIST
-## CEOS를 하면서 수행한 미션 정리
+## :smile 미션 정리
 
 ### 1. 바닐라 JS로 todo-list
 - html, css, javascript
