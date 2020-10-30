@@ -16,7 +16,7 @@
  
 ---------------------------------------------------------
 
-## 미션들을 수행하며 느낀점
+## 미션들을 수행하며 느낀점:droplet:
 
 ### todo-list
 >클론 코딩만 한 나로써 혼자 코드를 짜는게 생각보다 시간이 많이걸리고 훨씬 힘들었다. 
@@ -55,6 +55,9 @@ routing의 개념을 정확히 모르고 next라는 프레임워크를 얹어 �
 - span은 하위테그로 div, p 를 쓸 수 없으며 p는 div를 포함 할 수 없다.
 - opacity를 사용해 투명도를 조절함.
 - font-weight는 100단위로 인식한다 (반올림 한다 생각)
+- position: fixed 사용시 화면이 겹칠 수 있음
+- ```-webkit-user-select: none ```는 크롬에서 마우스 클릭 방지가 가능하다.
+
 
 
 :octocat: flexbox
@@ -75,15 +78,18 @@ push()의 return 값은 배열의길이, concat()의 return 값은 합친 배열
 - ```array.map(v,index) ```를 통해 배열 안의 정보 ex) [{a}, {b}] 에서 {a} {b} 를 뿌린다?.
 - ```array.filter((x) -=> {return x.length>2}``` 이런식으로 조건을 넣어줘 원하는 정보만 가질 수 있다.
 - ```array.indexOf(x) ``` array에서 특정값 x가 있는지 판단한다.(틀리면 =-1)    array가 **string**이 되어도 된다.
+- **lowCamelCase**로 변수명을 정한다. 함수는 **동사형**으로 써주는것이 좋다.
+- 
 
 
 
 ### React
 - setState()는 비동기로 작동한다. :point_up:
+- ```onClick={onClick()}``` 틀린표현 onClick()으 반환값이 들어감 ```onClick={onClick}```이 맞는 표현
+- inline으로 style을 넣을 때 ```style = {{backgroundColor : 'black'}}``` 이런식으로 넣어준다. (-기준 lowCamelCase)
 
 :aerial_tramway: react-router
 - Link 테그와 Route 테그는 Router테그 안에 있게한다. 즉 최상위는 <Router> </Router>
 - 중복 라우터를 허용하지 않기 위해서는 exact를 사용해 준다. ex) <Route exact path='/'> 
-- 
 
 
