@@ -35,7 +35,7 @@ flexbox가 각각 어떻게 움직이는지 하면서 늘었다. react역시 클
 
 ### messenger
 > 여전히 변수 네이밍 시 어떤 역할을 하는 건지 정하기가 어려웠다. 간단하게 하면 다른 내용과 겹쳐
-도중에 다른것을 바꿔야 할 때도 있었다. user와 message의 내용들을 따로 파일을 두어 보관하는 것
+도중에 다른것을 바꿔야 할 때도 있었다. **user와 message의 내용들을 따로 파일을 두어 보관**하는 것
 이 전 코드의 재사용에 있어 어떻게 활용하면 좋을지 생각 했던 것들이 앞으로 도움 될 것같다.
 routing의 개념을 정확히 모르고 next라는 프레임워크를 얹어 썼지만 이제는 왜 쓰는지 조금이나마
 알 수 있다. 코드량이 생각보다 많아져 각각의 Component로 잘게 쪼개어 파일 보관을 했다.
@@ -71,26 +71,25 @@ routing의 개념을 정확히 모르고 next라는 프레임워크를 얹어 �
 
 
 ### javascript
-- ary, ary1를 객체라 가정 할 때 ary.push(ary1)와 ary.concat(ary1) 에서
 
- **push()의 return 값은 배열의길이, concat()의 return 값은 합친 배열**이다.
-- let A = ''; 선언 했을 때 A의 값은 undefined이다.
+- let A = ''; 선언 했을 때 A의 값은 **undefined**이다.
+- **lowCamelCase**로 변수명을 정한다. 함수는 **동사형**으로 써주는것이 좋다.
+
+:whale2: 배열
+- ```array.push(ary1)```와 ```ary.concat(ary1)``` 에서 **push()의 return 값은 배열의길이, concat()의 return 값은 합친 배열**이다.
 - ```array.slice() ```를 통해 배열을 원하는 조건으로 자를 수 있다. ex) ary.slice(1) 맨 앞 정보 자름.
 - ```array.map(v,index) ```를 통해 배열 안의 정보 ex) [{a}, {b}] 에서 {a} {b} 를 뿌린다?.
 - ```array.filter((x) -=> {return x.length>2}``` 이런식으로 조건을 넣어줘 원하는 정보만 가질 수 있다.
 - ```array.indexOf(x) ``` array에서 특정값 x가 있는지 판단한다.(틀리면 =-1)    array가 **string**이 되어도 된다.
-- **lowCamelCase**로 변수명을 정한다. 함수는 **동사형**으로 써주는것이 좋다.
-- 
-
 
 
 ### React
 - setState()는 비동기로 작동한다. :point_up:
 - ```onClick={onClick()}``` 틀린표현 onClick()으 반환값이 들어감 ```onClick={onClick}```이 맞는 표현
 - inline으로 style을 넣을 때 ```style = {{backgroundColor : 'black'}}``` 이런식으로 넣어준다. (-기준 lowCamelCase)
+- img 태그에서 src를 js로 넣을 때 같은 경로의 파일인 경우```src={./pengsu.png}``` 이런식으로 가능하지만 다른 폴더안의 img일 경우 ```src={require('../public/pengsu.png')}``` require로 감싸주어야한다.
 
 :aerial_tramway: react-router
-- Link 테그와 Route 테그는 Router테그 안에 있게한다. 즉 최상위는 <Router> </Router>
-- 중복 라우터를 허용하지 않기 위해서는 exact를 사용해 준다. ex) <Route exact path='/'> 
-
+- Link 테그와 Route 테그는 Router테그 안에 있게한다. 즉 최상위는 ```<Router> </Router>```
+- 중복 라우터를 허용하지 않기 위해서는 exact를 사용해 준다. ex) ```<Route exact path='/'> ```
 
