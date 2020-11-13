@@ -14,6 +14,9 @@
 
 :seedling: [react-routing](https://react-router-inky.vercel.app/)
  
+ ### 4. Get 방식으로 서버와 통신하기 (axios 활용)
+ - Axios
+ 
 ---------------------------------------------------------
 
 ## 미션들을 수행하며 느낀점:droplet:
@@ -40,6 +43,16 @@ flexbox가 각각 어떻게 움직이는지 하면서 늘었다. react역시 클
 routing의 개념을 정확히 모르고 next라는 프레임워크를 얹어 썼지만 이제는 왜 쓰는지 조금이나마
 알 수 있다. 코드량이 생각보다 많아져 각각의 Component로 잘게 쪼개어 파일 보관을 했다.
 한결 익숙해진 css지만 아직 시간이 많이 걸렸다.
+
+
+### async, await, axios
+> async()를 이용해 비동기로 서버와 통신하는 방법을 이용했다. url을 이용해 서버에서 받아온 데이터들을
+map()함수를 활용해 뿌려보았다. async await을 이용하니 .then() 으로 이어가는 방식보다 훨씬 간편했을 뿐
+아니라 코드량이 많이 줄어 편했다. 만약 서버로부터 통신이 많아질 경우 어떤식으로 코드를 나누고, 폴더를 구조화
+할 지 한 번 생각해 보는 계기가 됐다. useEffect()함수의 작동방식을 정확히 알아보기 위해 사이트를 참고했다.
+api의 정의가 정확히 뭔지도 알아보았으면 좋겠다.
+
+:good: [React UseEffect](https://sgwanlee.medium.com/useeffect%EC%9D%98-dependency-array-ebd15f35403a)
 
 ---------------------------------------------------------
 
@@ -93,3 +106,5 @@ routing의 개념을 정확히 모르고 next라는 프레임워크를 얹어 �
 - Link 테그와 Route 테그는 Router테그 안에 있게한다. 즉 최상위는 ```<Router> </Router>```
 - 중복 라우터를 허용하지 않기 위해서는 exact를 사용해 준다. ex) ```<Route exact path='/'> ```
 
+
+:question: useEffect
