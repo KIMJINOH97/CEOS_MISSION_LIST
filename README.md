@@ -52,7 +52,7 @@ map()함수를 활용해 뿌려보았다. async await을 이용하니 .then() �
 할 지 한 번 생각해 보는 계기가 됐다. useEffect()함수의 작동방식을 정확히 알아보기 위해 사이트를 참고했다.
 api의 정의가 정확히 뭔지도 알아보았으면 좋겠다.
 
-:good: [React UseEffect](https://sgwanlee.medium.com/useeffect%EC%9D%98-dependency-array-ebd15f35403a)
+:thumbsup: [React UseEffect](https://sgwanlee.medium.com/useeffect%EC%9D%98-dependency-array-ebd15f35403a)
 
 ---------------------------------------------------------
 
