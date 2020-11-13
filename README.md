@@ -93,7 +93,7 @@ api의 정의가 정확히 뭔지도 알아보았으면 좋겠다.
 - ```array.slice() ```를 통해 배열을 원하는 조건으로 자를 수 있다. ex) ary.slice(1) 맨 앞 정보 자름.
 - ```array.map(v,index) ```를 통해 배열 안의 정보 ex) [{a}, {b}] 에서 {a} {b} 를 뿌린다?.
 - ```array.filter((x) -=> {return x.length>2}``` 이런식으로 조건을 넣어줘 원하는 정보만 가질 수 있다.
-- ```array.indexOf(x) ``` array에서 특정값 x가 있는지 판단한다.(틀리면 =-1)    array가 **string**이 되어도 된다.
+- ```array.indexOf(x) ``` array에서 특정값 x가 있는지 판단한다.(틀리면 =-1) array가 **string**이 되어도 된다. (포함하는 index > 0반환)
 
 
 ### React
