@@ -17,6 +17,10 @@
  ### 4. Get 방식으로 서버와 통신하기 (axios 활용)
  - Axios
  
+ ### 5. Post 방식을 이용한 JWT 로그인 인증 (axios 활용)
+ - Axios, querystring
+ - `'content-type': 'application/x-www-form-urlencoded'`으로 하기 위해 querystring을 썼다.
+ 
 ---------------------------------------------------------
 
 ## 미션들을 수행하며 느낀점:droplet:
@@ -45,7 +49,7 @@ routing의 개념을 정확히 모르고 next라는 프레임워크를 얹어 �
 한결 익숙해진 css지만 아직 시간이 많이 걸렸다.
 
 
-### async, await, axios
+### async, await, axios(get)
 > async()를 이용해 비동기로 서버와 통신하는 방법을 이용했다. url을 이용해 서버에서 받아온 데이터들을
 map()함수를 활용해 뿌려보았다. async await을 이용하니 .then() 으로 이어가는 방식보다 훨씬 간편했을 뿐
 아니라 코드량이 많이 줄어 편했다. 만약 서버로부터 통신이 많아질 경우 어떤식으로 코드를 나누고, 폴더를 구조화
@@ -53,6 +57,13 @@ map()함수를 활용해 뿌려보았다. async await을 이용하니 .then() �
 api의 정의가 정확히 뭔지도 알아보았으면 좋겠다.
 
 :thumbsup: [React UseEffect](https://sgwanlee.medium.com/useeffect%EC%9D%98-dependency-array-ebd15f35403a)
+
+### axios(post), jwt 토큰 인증
+> axios의 post 방식을 통해 회원가입, 로그인을 front 단에서 주고 받아보았다. 로그인 정보가 일치하면 서버에서 
+front로 token을 보내주고, 그 토큰을 header에 default값으로 넣어, 그 뒤 서버와 통신 할 수 있다.
+서버 쪽에서 jwt를 이용해 코드를 짜 보았지만, front에서 한 건 처음이다. 이를 통해 front, back에서 
+jwt를 이용해 어떻게 서로 정보를 주고 받는 지 알 수 있는 계기가 됐다. 로그인, 회원가입을 한 뒤, redirection을 위해
+`history.push` 를 활용 해 보았는데, 이 과정이 더 궁금해 알아 보는게 좋을 것 같다.
 
 ---------------------------------------------------------
 
@@ -108,3 +119,46 @@ api의 정의가 정확히 뭔지도 알아보았으면 좋겠다.
 
 
 :question: useEffect
+
+
+:hatched_chick: axios
+
+**Get**
+URL을 통해 서버와 통신을 주고 받는다. axios.get 시, parameter로 인자를 넘겨주게 되면 `URL/ .... prameter....` 이런식으로 서버에 전송된다.
+
+```
+// 1번째 방식
+axios({
+ method: 'get',
+ url: 'URL',
+ params: { },
+ headers: { },
+ data: { },
+}
+
+// 2번째 방식
+axios.get("URL", { params: {  객체  } }, { headers: ' 헤더 정보 ' } );
+``` 
+params로 굳이 넣지 않고 URL뒤 바로 넣을 수 있다.
+
+**Post**
+해당 URL로 data에 객체를 넣어 서버와 통신을 한다.
+
+```
+// 1번째 방식
+axios({
+ method: 'post',
+ url: 'URL',
+ params: { },
+ headers: { },
+ data: { },
+}
+
+// 2번째 방식
+axios.post("URL", {  객체  }, { headers: ' 헤더 정보 ' } );
+// 순서 잘 지키기
+``` 
+* 헤더 값에 토큰 고정시키기: axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+* 헤더에 content-type default값 두기: axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+* baseURL 설정하기: axios.defaults.baseURL = 'https://api.example.com';
+
