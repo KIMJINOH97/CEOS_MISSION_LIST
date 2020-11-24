@@ -120,6 +120,12 @@ jwt를 이용해 어떻게 서로 정보를 주고 받는 지 알 수 있는 계
 
 :question: useEffect
 
+:herb: history
+
+react-router-dom에서 사용할 수 있다.
+위의 npm을 설치하게 되면 페이지의 기록들을 저장할 수 있게 된다.
+
+
 
 :hatched_chick: axios
 
