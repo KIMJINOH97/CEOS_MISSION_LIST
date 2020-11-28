@@ -122,9 +122,13 @@ jwt를 이용해 어떻게 서로 정보를 주고 받는 지 알 수 있는 계
 
 :herb: history
 
-react-router-dom에서 사용할 수 있다.
-위의 npm을 설치하게 되면 페이지의 기록들을 저장할 수 있게 된다.
+react-router-dom에서 사용할 수 있다.  
+위의 npm을 설치하게 되면 페이지의 기록들을 저장할 수 있게 된다.  
+마치 stack처럼 경로가 저장된다고 보면 편하다.  
 
+`push('경로', [states])` 함수 [states]는 생략 가능하다. 해당 경로를 스택에 넣고 이동한다.  
+`goBack()` 함수 뒤로가기와 비슷하다.   
+`goForward()` 함수 앞으로가기와 비슷하다.  
 
 
 :hatched_chick: axios
